@@ -1,6 +1,13 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+header {
+    flex-basis: 45%;
+    
+    nav {
+        width: 100%;
+    }
+}
 
 .navIcons{
     order: 2;
@@ -8,10 +15,14 @@
     border: none;
     display: block;
     position: absolute;
-    top: 6%;
-    left: 33%;
+    top: 5%;
+    left: 40%;
     font-size: 1.5rem;
     color: $borderColor;
+
+    .hidden {
+        display: none;
+    }
 }
 
 // setting the width on the nav
@@ -58,6 +69,7 @@ nav{
     padding: 40px 0;
     .submitContainer{
         display: flex;
+        justify-content: center;
         button{
             @include button;
             padding: 10px 12px;
@@ -71,19 +83,19 @@ nav{
             border: 0;
             border-bottom: 2px solid $borderColor;
             padding-left: 10px;
+            width: 80%;
         }
     }
     .toDoUl{
         list-style: circle;
-        padding: 25px;
+        padding: 40px;
         li{
-            padding: 5px 0;
+            padding: 10px 0;
         }
     }
 }
 
-
 h1{
     font-size: 2.8rem;
-    padding: 20px 0 20px 60px;
+    padding: 20px 0 0 70px;
 }

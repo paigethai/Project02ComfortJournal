@@ -291,6 +291,14 @@ p {
   font-size: 1rem;
 }
 
+header {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+header nav {
+  width: 100%;
+}
+
 .navIcons {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -299,10 +307,13 @@ p {
   border: none;
   display: block;
   position: absolute;
-  top: 6%;
-  left: 33%;
+  top: 5%;
+  left: 40%;
   font-size: 1.5rem;
   color: #5d6269;
+}
+.navIcons .hidden {
+  display: none;
 }
 
 nav {
@@ -349,6 +360,9 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .toDo .submitContainer button {
   color: #5d6269;
@@ -371,16 +385,61 @@ nav {
   border: 0;
   border-bottom: 2px solid #5d6269;
   padding-left: 10px;
+  width: 80%;
 }
 .toDo .toDoUl {
   list-style: circle;
-  padding: 25px;
+  padding: 40px;
 }
 .toDo .toDoUl li {
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 h1 {
   font-size: 2.8rem;
-  padding: 20px 0 20px 60px;
+  padding: 20px 0 0 70px;
+}
+
+main {
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+}
+
+.uploadedEntries {
+  height: 100rem;
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  border-top: 0.5px solid #5d6269;
+}
+
+.userInputEntry {
+  margin: 2rem 0;
+}
+
+.journalForm textarea {
+  border: 1.5px solid #5d6269;
+}
+
+.journalForm textarea {
+  height: 250px;
+  width: 100%;
+  resize: none;
+}
+.journalForm button {
+  color: #5d6269;
+  background-color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-size: 1rem;
+  border: 2px solid #5d6269;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
+.journalForm button:hover,
+.journalForm button:focus {
+  color: #FFF;
+  background-color: #5d6269;
 }

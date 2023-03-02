@@ -1,2 +1,46 @@
 @use './variables' as *;
 @use './mixins' as *;
+
+main {
+    flex-basis: 55%;
+}
+
+// Need to figure out how to create vertical space between the form and journal entries
+    // Creating vertical space in .journalContainer?
+
+.uploadedEntries {
+    height: 100rem;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    border-top: 0.5px solid $borderColor;
+}
+
+.userInputEntry {
+    margin: 2rem 0;
+}
+
+.journalForm textarea {
+    border: 1.5px solid $borderColor;
+}
+
+
+.journalForm {
+    textarea {
+        height: 250px;
+        width: 100%;
+        resize: none;
+    }
+
+    button {
+        @include button;
+        width: 100%;
+    }
+
+    button:hover, 
+    button:focus {
+        color: $backgroundColor1;
+        background-color: $borderColor;
+    }
+}
+
+    
