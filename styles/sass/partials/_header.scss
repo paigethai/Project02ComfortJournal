@@ -1,0 +1,89 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+
+.navIcons{
+    order: 2;
+    background-color: inherit;
+    border: none;
+    display: block;
+    position: absolute;
+    top: 6%;
+    left: 33%;
+    font-size: 1.5rem;
+    color: $borderColor;
+}
+
+// setting the width on the nav
+nav{
+    width: 45%;
+}
+
+//HEADER IMG STYLING
+.headerImg{
+    margin-bottom: 30px;
+}
+
+//PROMPT SECTION STYLING
+.prompt{
+    padding: 40px 0;
+    // setting a flex on the prompt and quotation marks and them postioning the quotation marks
+    .promptIconContainer{
+        display: flex;
+        i{
+            font-size: 1.3rem;
+            color: $borderColor;
+        }
+        .right{
+            position: relative;
+            top: 150px;
+        }
+    }
+    .promptContainer{
+        padding: 10px 15px;
+        h2{
+            @include h2 (1.5rem);
+        }
+    }
+}
+
+// CAALENDAR IMG STYLING
+.calendar{
+    margin: 30px 0
+}
+
+
+// TO DO STYLING
+.toDo{
+    padding: 40px 0;
+    .submitContainer{
+        display: flex;
+        button{
+            @include button;
+            padding: 10px 12px;
+        }
+        button:hover,
+        button:focus{
+        color: $backgroundColor1;
+        background-color: $borderColor;
+        }
+        input{
+            border: 0;
+            border-bottom: 2px solid $borderColor;
+            padding-left: 10px;
+        }
+    }
+    .toDoUl{
+        list-style: circle;
+        padding: 25px;
+        li{
+            padding: 5px 0;
+        }
+    }
+}
+
+
+h1{
+    font-size: 2.8rem;
+    padding: 20px 0 20px 60px;
+}

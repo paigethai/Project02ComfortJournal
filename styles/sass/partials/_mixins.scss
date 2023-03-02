@@ -1,0 +1,17 @@
+@mixin h2($sizeValue){
+    font-size: $sizeValue;
+    letter-spacing: 1px;
+    color: #5d6269;
+}
+
+@mixin button{
+    color: #5d6269;
+    background-color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-size: 1rem;
+    border: 2px solid #5d6269;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+

@@ -1,0 +1,19 @@
+@use './variables' as *;
+
+h1, h2, h3, h4, h5, h6, button{
+    font-family: 'Belleza', serif;
+    margin: 0;
+    padding: 0;
+}
+
+p, a, li{
+    font-family: 'Arimo', sans-serif;
+    font-size: 1rem;
+}
+
+p{
+    line-height: 1.6rem;
+    letter-spacing: 0.05rem;
+    font-size: 1rem;
+}
+// use clamp max v min??
