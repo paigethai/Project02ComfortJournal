@@ -10,9 +10,15 @@ import { getDatabase, ref } from "https://www.gstatic.com/firebasejs/9.17.1/fire
 const database = getDatabase(firebaseInfo);
 const dbRef = ref(database);
 
+// save the references that we expect to interact with 
+const promptRef = ref(database, '/prompts')
+const userEntryRef = ref(database, '/userEntry')
+
 // Use document.querySelector() to get our JS objects:
     // 1. One that points to the form that would hold the input text area
-    // 2. One that points to an input field where the user would input text that indicates time / date of their entry
+    const formElement = document.querySelector('#journalForm');
+    // 2. One that points to an input field where the user would input text that indicates time / date of their entry!!!!
+    const textElement = document.querySelector('')
     // 3. One that points to the textarea where the user inputs their journal entry via text
     // 4. One that points to the button for the user to submit their entry
     // 5. One that points to the ul will hold the the each li (journal entry)
