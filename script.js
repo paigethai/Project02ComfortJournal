@@ -65,7 +65,7 @@ formElement.addEventListener('submit', function(event){
         push(userEntryRef, journalDateEntryObj);
         // Clear the input field to an empty string 
         textElement.value = '';
-    }
+    } 
 });
 
 
@@ -81,7 +81,7 @@ onValue(userEntryRef, function(journalObject){
         // Use the for loop that'll append the li children to ul....do i need property key here? refer to animals excersize on the why
         for(let key in entries){
             const headerValue = entries[key].userDate;
-            const paragraphValue = entries[key].userJournal
+            const paragraphValue = entries[key].userJournal;
 
             // add a li 
             // append the date as an h3
@@ -99,7 +99,6 @@ onValue(userEntryRef, function(journalObject){
 
 
 
-
 // **************************************************
 
 // Journal Prompts 
@@ -108,22 +107,28 @@ onValue(userEntryRef, function(journalObject){
 
 // Use doucment.querySelector() to get our JS objects: 
     // 1. One that points to the class name of "prompt-container" within the aside 
+    const promptContainer = document.querySelector('.promptContainer');
 
-    // IMPORT DATA via importing JSON file 
-    // Add them manually directly into Firebase db  
-        // Create a variable that'll hold an array of prompts (objects)
-        // Create a function that'll add the prompt variable to the database 
-        // Call the function to store the prompts in the database
-
-// Using the onValue() method to pull in our data from firebase 
-    // This will get the data that we just sent to the database, back to our code so we can work with it 
-
-    // Use a callback function that'll give us direct access to the individual prompts within the prompt object
-
-// Refer to the variable that the prompts are stored within and using a Math.floor() and Math.random(), randomly select a prompt (value) from the prompts array
+// Using the onValue() method to pull in our data from firebase
+// This will get the data that we just sent to the database, back to our code so we can work with it  
+// Use a callback function that'll give us direct access to the individual prompts within the prompt object
+onValue(promptRef, function(data){
+    // Refer to the variable that the prompts are stored within and using a Math.floor() and Math.random(), randomly select a prompt (value) from the prompts array
+    const promptData = data.val();
     // Store the above within a variable --> randomPrompt
+    function randomPrompt(promptArray){
+        const randomPrompt = Math.floor(Math.random() * promptArray.length)
+        return promptArray[randomPrompt];
+    }
+    const randomizedPrompt = randomPrompt(promptData);
 
     // Refer to the variable from Step 1 and use the innerHTML property to add --> <p>${randomPrompt}</p>
+    for(let key in promptData){
+        const headerTwo = randomizedPrompt;
+        promptContainer.innerHTML = `<h2>${headerTwo}</h2>`;
+        console.log(headerTwo);
+    }
+})
 
 
 
@@ -159,3 +164,4 @@ const menuToggle = function(){
 
 // making the icons listen for user interaction
 navIcons.addEventListener("click", menuToggle);
+
