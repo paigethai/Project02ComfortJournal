@@ -8,6 +8,10 @@ header {
         width: 100%;
     }
 }
+aside{
+    transform: translateX(0);
+    transition: transform 0.2s;
+}
 
 .navIcons{
     order: 2;
@@ -15,20 +19,20 @@ header {
     border: none;
     display: block;
     position: absolute;
-    top: 5%;
+    z-index: 10;
+    top: 4%;
     left: 40%;
     font-size: 1.5rem;
-    color: $borderColor;
-
-    .hidden {
+    cursor: pointer;
+    .fa-times{
         display: none;
     }
-}
+    }
 
-// setting the width on the nav
-nav{
-    width: 45%;
-}
+    .shown {
+        transform: translateX(-100%);
+    }
+
 
 //HEADER IMG STYLING
 .headerImg{

@@ -11,6 +11,12 @@ import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebas
 const database = getDatabase(firebaseInfo);
 const dbRef = ref(database);
 
+// **************************************************
+
+// JOURNAL ENTRY 
+
+// **************************************************
+
 // save the references that we expect to interact with 
 const promptRef = ref(database, '/prompts');
 const userEntryRef = ref(database, '/userEntry');
@@ -95,11 +101,11 @@ onValue(userEntryRef, function(journalObject){
 
 
 
-// **********************************
+// **************************************************
 
+// Journal Prompts 
 
-
-// PSUEDO CODE --> Journal Prompts 
+// **************************************************
 
 // Use doucment.querySelector() to get our JS objects: 
     // 1. One that points to the class name of "prompt-container" within the aside 
@@ -119,3 +125,38 @@ onValue(userEntryRef, function(journalObject){
     // Store the above within a variable --> randomPrompt
 
     // Refer to the variable from Step 1 and use the innerHTML property to add --> <p>${randomPrompt}</p>
+
+
+
+// **************************************************
+
+// HAMBURGER MENU
+
+// **************************************************
+
+// declaring variables
+const navAside = document.querySelector('.navAside');
+
+const navIcons = document.querySelector('.navIcons');
+
+const hamIcon = document.querySelector('.fa-bars');
+
+const closeNav = document.querySelector('.fa-x');
+
+// making a function w if else statement for toggling menu open and close
+const menuToggle = function(){
+    if (navAside.classList.contains("shown"))
+    {
+        navAside.classList.remove('shown');
+        closeNav.style.display = 'block';
+        hamIcon.style.display = 'none';
+    }
+    else{
+        navAside.classList.add('shown'); 
+        closeNav.style.display ='none';
+        hamIcon.style.display = 'block';
+    }
+}
+
+// making the icons listen for user interaction
+navIcons.addEventListener("click", menuToggle);

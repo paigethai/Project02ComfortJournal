@@ -299,6 +299,15 @@ header nav {
   width: 100%;
 }
 
+aside {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
 .navIcons {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -307,17 +316,19 @@ header nav {
   border: none;
   display: block;
   position: absolute;
-  top: 5%;
+  z-index: 10;
+  top: 4%;
   left: 40%;
   font-size: 1.5rem;
-  color: #5d6269;
+  cursor: pointer;
 }
-.navIcons .hidden {
+.navIcons .fa-times {
   display: none;
 }
 
-nav {
-  width: 45%;
+.shown {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .headerImg {
@@ -406,7 +417,7 @@ main {
 }
 
 .uploadedEntries {
-  height: 100rem;
+  height: 65rem;
   overflow-y: scroll;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
