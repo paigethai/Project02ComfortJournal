@@ -49,10 +49,9 @@ formElement.addEventListener('submit', function(event){
 
     // Retrieve the journal entry via document.querySelector('textarea') and store within a variable doing this within the scope of the event listener bcc it will be easier to call on 
     const textElement = document.getElementById('comment');
-    console.log(textElement)
 
     const journalEntry = textElement.value;
-    // cant figure out why its not reading the textElement as an object!!! why?
+
     
     // saving the date and journal entry into an object so that in the DB it is nested together as its important that the date and entry are associated
     const journalDateEntryObj = {
