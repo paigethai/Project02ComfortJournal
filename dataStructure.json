@@ -1,13 +1,6 @@
 
         {
-        "prompts": [
-                {"promptOne": "If you can dance and be free and be embarrassed, you can rule the world."},
-                {"promptTwo": "Write about the idea of self-care and what it means to you."},
-                {"promptThree": "Bring your whole self to the experience. Because the more we do that, the more that people get to see that, the more comfortable everybody's gonna be with it."},
-                {"promptFour": "Tell a story about one of the following words: success, fulfillment, growth, achievement."},
-                {"promptFive": "Describe your definition of happiness."},
-                {"promptSix": "If your actions create a legacy that inspires others to dream more, learn more, do more and become more, then, you are an excellent leader."},
-                {"promptSeven": "Dive into life lessons you believe everyone can benefit from learning."}
+        "prompts": [ "If you can dance and be free and be embarrassed, you can rule the world.", "Write about the idea of self-care and what it means to you.", "Bring your whole self to the experience. Because the more we do that, the more that people get to see that, the more comfortable everybody's gonna be with it.", "Tell a story about one of the following words: success, fulfillment, growth, achievement.", "Describe your definition of happiness.", "If your actions create a legacy that inspires others to dream more, learn more, do more and become more, then, you are an excellent leader.", "Dive into life lessons you believe everyone can benefit from learning."
         ],
 
         "userEntry":{
