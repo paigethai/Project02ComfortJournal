@@ -60,7 +60,7 @@ formElement.addEventListener('submit', function(event){
         push(userEntryRef, journalDateEntryObj);
         // Clear the input field to an empty string 
         textElement.value = '';
-    }
+    } 
 });
 
 
@@ -77,7 +77,6 @@ onValue(userEntryRef, function(journalObject){
         for(let key in entries){
             const headerValue = entries[key].userDate;
             const paragraphValue = entries[key].userJournal;
-            console.log(headerValue);
 
             // add a li 
             // append the date as an h3
@@ -92,7 +91,6 @@ onValue(userEntryRef, function(journalObject){
         }
     }
 })
-
 
 
 
