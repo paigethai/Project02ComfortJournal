@@ -20,7 +20,7 @@ const userEntryRef = ref(database, '/userEntry');
     // 1. One that points to the form that would hold the input text area
     const formElement = document.querySelector('.journalForm');
 
-    // 4. One that points to the button for the user to submit their entry
+    // 4. One that points to the button for the user to submit their entry MIGHT NOT NEED THIS~!!!!!!!!!!!!!!!!
     const journalButton = document.querySelector('#journalButton');
 
     // 5. One that points to the ul will hold the the each li (journal entry)
@@ -43,6 +43,7 @@ formElement.addEventListener('submit', function(event){
 
     // Retrieve the journal entry via document.querySelector('textarea') and store within a variable doing this within the scope of the event listener bcc it will be easier to call on 
     const textElement = document.getElementById('comment');
+    console.log(textElement)
 
     const journalEntry = textElement.value;
     // cant figure out why its not reading the textElement as an object!!! why?
@@ -58,7 +59,7 @@ formElement.addEventListener('submit', function(event){
         // Save the user entry / value to the database
         push(userEntryRef, journalDateEntryObj);
         // Clear the input field to an empty string 
-        journalEntry.value = '';
+        textElement.value = '';
     }
 });
 
@@ -72,12 +73,26 @@ onValue(userEntryRef, function(journalObject){
         // Clear the existing ul from the page using innerHTML
         journalUl.innerHTML = "";
 
+        // Use the for loop that'll append the li children to ul....do i need property key here? refer to animals excersize on the why
+        for(let key in entries){
+            const headerValue = entries[key].userDate;
+            const paragraphValue = entries[key].userJournal
+
+            // add a li 
+            // append the date as an h3
+            // append the user input as a paragraph 
+            const newListItem = document.createElement('li');
+            newListItem.innerHTML = `
+            <h3>${headerValue}</h3>
+            <p>${paragraphValue}</p>`;
+
+            // append li as child to ul
+            journalUl.appendChild(newListItem);
+        }
     }
-    // Use the for loop that'll append the li children to ul 
-
-
-
 })
+
+
 
 
 // **********************************
