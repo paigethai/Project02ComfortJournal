@@ -13,6 +13,7 @@ main {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     border-top: 0.5px solid $borderColor;
+    margin-top: 5.5rem;
 }
 
 .userInputEntry {

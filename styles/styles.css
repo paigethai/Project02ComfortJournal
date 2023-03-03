@@ -295,6 +295,10 @@ header {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
 }
+header h1 {
+  position: absolute;
+  left: 47%;
+}
 header nav {
   width: 100%;
 }
@@ -317,8 +321,9 @@ aside {
   display: block;
   position: absolute;
   z-index: 10;
-  top: 4%;
-  left: 40%;
+  top: 2.5%;
+  left: 86%;
+  width: 50%;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -422,6 +427,7 @@ main {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   border-top: 0.5px solid #5d6269;
+  margin-top: 5.5rem;
 }
 
 .userInputEntry {
