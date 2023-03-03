@@ -282,13 +282,13 @@ h1, h2, h3, h4, h5, h6, button {
 
 p, a, li {
   font-family: "Arimo", sans-serif;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 0.8rem);
 }
 
 p {
   line-height: 1.6rem;
   letter-spacing: 0.05rem;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 header {
@@ -298,6 +298,8 @@ header {
 header h1 {
   position: absolute;
   left: 47%;
+  font-size: clamp(2rem, 2vw, 2.8rem);
+  padding: 20px 0 0 70px;
 }
 header nav {
   width: 100%;
@@ -360,7 +362,7 @@ aside {
   padding: 10px 15px;
 }
 .prompt .promptContainer h2 {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   letter-spacing: 1px;
   color: #5d6269;
 }
@@ -411,11 +413,6 @@ aside {
   padding: 10px 0;
 }
 
-h1 {
-  font-size: 2.8rem;
-  padding: 20px 0 0 70px;
-}
-
 main {
   -ms-flex-preferred-size: 55%;
       flex-basis: 55%;
@@ -432,6 +429,9 @@ main {
 
 .userInputEntry {
   margin: 2rem 0;
+}
+.userInputEntry h3 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .journalForm textarea {

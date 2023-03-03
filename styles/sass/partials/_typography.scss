@@ -8,12 +8,12 @@ h1, h2, h3, h4, h5, h6, button{
 
 p, a, li{
     font-family: 'Arimo', sans-serif;
-    font-size: 1rem;
+    font-size: clamp(1rem,2vw,0.8rem);
 }
 
 p{
     line-height: 1.6rem;
     letter-spacing: 0.05rem;
-    font-size: 1rem;
+    font-size: clamp(0.8rem,2vw,1rem);
 }
 // use clamp max v min??
