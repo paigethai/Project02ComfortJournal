@@ -15,6 +15,11 @@ header {
         width: 100%;
     }
 }
+
+header.hide{
+    flex-basis: 0;
+}
+
 aside{
     transform: translateX(0);
     transition: transform 0.2s;
@@ -27,18 +32,19 @@ aside{
     display: block;
     position: absolute;
     z-index: 10;
-    top: 2.5%;
-    left: 86%;
+    top: 4.5%;
+    left: 25%;
     width: 50%;
     font-size: 1.5rem;
     cursor: pointer;
-    .fa-times{
+    .fa-angle-right{
         display: none;
     }
     }
 
     .shown {
         transform: translateX(-100%);
+        position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;
     }
 
 

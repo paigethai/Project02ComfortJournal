@@ -5,6 +5,9 @@ main {
     flex-basis: 55%;
 }
 
+main.full{
+    flex-basis: 100%;
+}
 // Need to figure out how to create vertical space between the form and journal entries
     // Creating vertical space in .journalContainer?
 

@@ -17,23 +17,20 @@
 	<title>Comfort Journal</title>
 </head>
 <body>
-<!-- We're aware that this is not best practice....just place holder until hamburger styling is applied  -->
 <div class="flexContainer">
 	<header>
-		<div class="wrapper">
-			<h1>Comfort Journal</h1>
-		</div>
+		<h1>Comfort Journal</h1>
 		<nav>
+			<button type="submit" class="navIcons">
+				<i class="fa-sharp fa-solid fa-angle-left">
+					<span class="sr-only">Close information menu</span>
+				</i>
+				<i class="fa-sharp fa-solid fa-angle-right">
+					<span class="sr-only">Open information menu</span>
+				</i>
+			</button>
 			<!-- NAV ASIDE -->
 			<aside class="navAside">
-				<button type="submit" class="navIcons">
-					<i class="fa-solid fa-x hidden">
-						<span class="sr-only">Close navigation menu</span>
-					</i>
-					<i class="fa-solid fa-bars">
-						<span class="sr-only">Open navigation menu</span>
-					</i>
-				</button>
 				<!-- Nav IMG -->
 				<figure class="headerImg">
 					<img src="./assets/tree.jpg" alt="A tree branch against snow with a shadow">
@@ -47,8 +44,9 @@
 							<i class="fa-solid fa-quote-left">
 								<span class="sr-only">Opening quotation mark</span>
 							</i>
-							<div class="promptContainer"></div>
-								<!-- this is where the prompt will populate -->
+							<div class="promptContainer">
+
+							</div>
 							<i class="fa-solid fa-quote-right right">
 								<span class="sr-only">Closing quotation mark</span>
 							</i>
@@ -89,14 +87,10 @@
 		
 	<!-- MAIN SECTIONS -->
 	<main>
-
 		<!-- User's Posted Journal Entries Section -->
 		<section class="userJournalEntry">
 			<div class="wrapper">
 				<ul class="uploadedEntries">
-					<!-- place holder li for stylng -->
-					<li class="userInputEntry"></li>
-					<!-- User's uploaded journal entries will go here! -->
 				</ul>
 			</div><!-- end of .wrapper div -->
 		</section><!-- end of .userJournalEntry section -->
@@ -111,7 +105,7 @@
 			</div><!-- end of .wrapper div -->
 		</section><!-- end of journalInput -->
 	</main>
-</div> <!-- end of flexcontainer for pre ham styling -->
+</div> <!-- end of flexcontainer-->
 
 <!-- FOOTER SECTION -->
 <footer>

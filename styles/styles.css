@@ -305,6 +305,11 @@ header nav {
   width: 100%;
 }
 
+header.hide {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+}
+
 aside {
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -323,19 +328,30 @@ aside {
   display: block;
   position: absolute;
   z-index: 10;
-  top: 2.5%;
-  left: 86%;
+  top: 4.5%;
+  left: 25%;
   width: 50%;
   font-size: 1.5rem;
   cursor: pointer;
 }
-.navIcons .fa-times {
+.navIcons .fa-angle-right {
   display: none;
 }
 
 .shown {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .headerImg {
@@ -416,6 +432,11 @@ aside {
 main {
   -ms-flex-preferred-size: 55%;
       flex-basis: 55%;
+}
+
+main.full {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .uploadedEntries {
