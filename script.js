@@ -85,7 +85,6 @@ onValue(promptRef, function(data){
     for(let key in promptData){
         const headerTwo = randomizedPrompt;
         promptContainer.innerHTML = `<h2>${headerTwo}</h2>`;
-        console.log(headerTwo);
     }
 })
 
@@ -102,7 +101,8 @@ const navIcons = document.querySelector('.navIcons');
 const hamIcon = document.querySelector('.fa-angle-right');
 const closeNav = document.querySelector('.fa-angle-left');
 const main = document.querySelector('main');
-const header = document.querySelector('header')
+const header = document.querySelector('header');
+const h1Element = document.querySelector('h1');
 
 const menuToggle = function(){
     if (navAside.classList.contains("shown"))
@@ -110,6 +110,8 @@ const menuToggle = function(){
         navAside.classList.remove('shown');
         main.classList.remove('full');
         header.classList.remove('hide');
+        navIcons.classList.remove('move')
+        h1Element.classList.remove('move')
         closeNav.style.display = 'block';
         hamIcon.style.display = 'none';
     }
@@ -117,6 +119,8 @@ const menuToggle = function(){
         navAside.classList.add('shown'); 
         main.classList.add('full');
         header.classList.add('hide');
+        navIcons.classList.add('move')
+        h1Element.classList.add('move')
         closeNav.style.display ='none';
         hamIcon.style.display = 'block';
     }
