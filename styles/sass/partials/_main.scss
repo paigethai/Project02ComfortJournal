@@ -5,17 +5,24 @@ main {
     flex-basis: 55%;
 }
 
+main.full{
+    flex-basis: 100%;
+}
 // Need to figure out how to create vertical space between the form and journal entries
     // Creating vertical space in .journalContainer?
 
 .uploadedEntries {
-    height: 100rem;
+    height: 65rem;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     border-top: 0.5px solid $borderColor;
+    margin-top: 5.5rem;
 }
 
 .userInputEntry {
+    h3{
+        font-size: clamp(1rem, 2vw, 1.5rem);
+    }
     margin: 2rem 0;
 }
 
