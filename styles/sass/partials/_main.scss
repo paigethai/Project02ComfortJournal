@@ -9,10 +9,15 @@ main {
     // Creating vertical space in .journalContainer?
 
 .uploadedEntries {
-    height: 100rem;
+    height: 79rem;
+    margin-top: 25px;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     border-top: 0.5px solid $borderColor;
+
+    h3 {
+        margin-top: 20px;
+    }
 }
 
 .userInputEntry {
@@ -33,6 +38,8 @@ main {
     button {
         @include button;
         width: 100%;
+        margin-top: -3px;
+        padding: 10px;
     }
 
     button:hover, 

@@ -307,9 +307,9 @@ header nav {
   border: none;
   display: block;
   position: absolute;
-  top: 5%;
-  left: 40%;
-  font-size: 1.5rem;
+  top: 3.7%;
+  left: 49.5%;
+  font-size: 2rem;
   color: #5d6269;
 }
 .navIcons .hidden {
@@ -350,11 +350,11 @@ nav {
 }
 
 .calendar {
-  margin: 30px 0;
+  margin: 50px 0;
 }
 
 .toDo {
-  padding: 40px 0;
+  padding: 50px 0;
 }
 .toDo .submitContainer {
   display: -webkit-box;
@@ -406,11 +406,15 @@ main {
 }
 
 .uploadedEntries {
-  height: 100rem;
+  height: 79rem;
+  margin-top: 25px;
   overflow-y: scroll;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   border-top: 0.5px solid #5d6269;
+}
+.uploadedEntries h3 {
+  margin-top: 20px;
 }
 
 .userInputEntry {
@@ -437,9 +441,17 @@ main {
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
   width: 100%;
+  margin-top: -3px;
+  padding: 10px;
 }
 .journalForm button:hover,
 .journalForm button:focus {
   color: #FFF;
   background-color: #5d6269;
+}
+
+footer {
+  background-color: #9fa8b5;
+  padding: 5px;
+  text-align: center;
 }
