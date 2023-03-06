@@ -7,7 +7,7 @@ header {
     
     h1 {
         position: absolute;
-        left: 47%;
+        left: 49%;
         font-size: clamp(2.0rem, 2vw, 2.8rem);
         padding: 20px 0 0 70px;
     }
@@ -28,23 +28,39 @@ aside{
 
 .navIcons{
     order: 2;
+    color: $borderColor;
     background-color: inherit;
     border: none;
     display: block;
     position: absolute;
     z-index: 10;
-    top: 4.5%;
+    top: 2.7%;
     left: 50%;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    
     cursor: pointer;
     .fa-angle-right{
         display: none;
     }
+    
+    i:hover,
+    i:focus {
+        color: $detailColor;
     }
+}
 
     .shown {
         transform: translateX(-100%);
-        position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;
+        position: absolute; 
+        width: 1px; 
+        height: 1px; 
+        margin: -1px; 
+        border: 0; 
+        padding: 0; 
+        white-space: nowrap; 
+        clip-path: inset(100%); 
+        clip: rect(0 0 0 0); 
+        overflow: hidden;
     }
 
     .move{
@@ -73,7 +89,7 @@ aside{
         }
     }
     .promptContainer{
-        padding: 10px 15px;
+        padding: 37px 15px;
         h2{
             @include h2 (clamp(1rem, 2vw, 1.5rem));
         }

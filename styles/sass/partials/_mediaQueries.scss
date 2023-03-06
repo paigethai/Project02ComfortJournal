@@ -1,2 +1,29 @@
 @use './variables' as *;
 @use './mixins' as *;
+
+@media (max-width: 950px) {
+    .uploadedEntries {
+        height: 60rem;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .navIcons {
+        z-index: 20;
+
+        .fa-angle-left {
+            position: absolute;
+            left: 200px;
+        }
+    }
+    
+    aside {
+        height: 900px;
+        width: 100%;
+        z-index: 10;
+        position: fixed;
+        overflow-y: scroll;
+        background-color: white;
+    }
+}

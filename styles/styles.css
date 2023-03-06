@@ -297,7 +297,7 @@ header {
 }
 header h1 {
   position: absolute;
-  left: 47%;
+  left: 49%;
   font-size: clamp(2rem, 2vw, 2.8rem);
   padding: 20px 0 0 70px;
 }
@@ -323,18 +323,23 @@ aside {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  color: #5d6269;
   background-color: inherit;
   border: none;
   display: block;
   position: absolute;
   z-index: 10;
-  top: 4.5%;
+  top: 2.7%;
   left: 50%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 .navIcons .fa-angle-right {
   display: none;
+}
+.navIcons i:hover,
+.navIcons i:focus {
+  color: #9fa8b5;
 }
 
 .shown {
@@ -379,7 +384,7 @@ aside {
   top: 150px;
 }
 .prompt .promptContainer {
-  padding: 10px 15px;
+  padding: 37px 15px;
 }
 .prompt .promptContainer h2 {
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -444,12 +449,15 @@ main.full {
 }
 
 .uploadedEntries {
-  height: 65rem;
+  height: 79rem;
+  margin-top: 5rem;
   overflow-y: scroll;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   border-top: 0.5px solid #5d6269;
-  margin-top: 5.5rem;
+}
+.uploadedEntries h3 {
+  margin-top: 2rem;
 }
 
 .userInputEntry {
@@ -490,6 +498,30 @@ main.full {
 
 footer {
   background-color: #9fa8b5;
+  margin-top: 2rem;
   padding: 5px;
   text-align: center;
+}
+
+@media (max-width: 950px) {
+  .uploadedEntries {
+    height: 60rem;
+  }
+}
+@media (max-width: 550px) {
+  .navIcons {
+    z-index: 20;
+  }
+  .navIcons .fa-angle-left {
+    position: absolute;
+    left: 200px;
+  }
+  aside {
+    height: 900px;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    overflow-y: scroll;
+    background-color: white;
+  }
 }
