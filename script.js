@@ -17,9 +17,6 @@ const userEntryRef = ref(database, '/userEntry');
 
 
 const formElement = document.querySelector('.journalForm');
-
-const journalButton = document.querySelector('#journalButton');
-
 const journalUl = document.querySelector('.uploadedEntries');
 
 
@@ -29,19 +26,21 @@ formElement.addEventListener('submit', function(event){
     const month = date.getUTCMonth() + 1; 
     const day = date.getUTCDate();
     const year = date.getUTCFullYear();
-    const newdate = year + "/" + month + "/" + day;
+    const newDate = year + "/" + month + "/" + day;
 
     const textElement = document.getElementById('comment');
-    const journalEntry = textElement.value;
+    const journalEntry = textElement.value.trim();
 
     const journalDateEntryObj = {
-        userDate: newdate,
+        userDate: newDate,
         userJournal: journalEntry
     }
-    if(journalDateEntryObj){
+    if(journalEntry.length >= 3){
         push(userEntryRef, journalDateEntryObj);
         textElement.value = '';
-    } 
+    } else  {
+        alert('You have not entered anything, please add in some thoughts or feelings!')
+    }
 });
 
 
@@ -62,9 +61,6 @@ onValue(userEntryRef, function(journalObject){
             journalUl.appendChild(newListItem);
         }
     }
-    else if (journalObject === "") {
-        alert('You have not entered anything, please add in some thoughts or feelings!')
-    }
 })
 
 
@@ -83,16 +79,15 @@ onValue(promptRef, function(data){
         const randomPrompt = Math.floor(Math.random() * promptArray.length)
         return promptArray[randomPrompt];
     }
-
-    const randomizedPrompt = randomPrompt(promptData);
-
-    for(let key in promptData){
-        const headerTwo = randomizedPrompt;
-        promptContainer.innerHTML = `<h2>${headerTwo}</h2>`;
-    }
-
-    if (data = 'null'){
+    if (promptData === null || promptData.length <= 0){
         promptContainer.innerHTML = `<h2>If you can dance and be free and be embarrassed, you can rule the world.</h2>`;
+    }else{
+        const randomizedPrompt = randomPrompt(promptData);
+
+        for(let key in promptData){
+            const headerTwo = randomizedPrompt;
+            promptContainer.innerHTML = `<h2>${headerTwo}</h2>`;
+        }
     }
 })
 
