@@ -17,112 +17,80 @@
 	<title>Comfort Journal</title>
 </head>
 <body>
-<!-- We're aware that this is not best practice....just place holder until hamburger styling is applied  -->
 <div class="flexContainer">
 	<header>
-		<div class="flexContainer">
-			<nav>
-				<!-- come back to this flex container could get away without? once hamburger is applied -->
-				<div class="flexContainer">
-					<button type="submit" class="navIcons">
-						<i class="fa-solid fa-x hidden">
-							<span class="sr-only">Close navigation menu</span>
-						</i>
-						<i class="fa-solid fa-bars">
-							<span class="sr-only">Open navigation menu</span>
-						</i>
-						</button>
-		
-					<!-- NAV ASIDE -->
-					<aside>
-						<!-- Nav IMG -->
-						<figure class="headerImg">
-							<img src="./assets/tree.jpg" alt="A tree branch against snow with a shadow">
-						</figure>
-		
-						<!-- PROMPT SECTION -->
-						<section class="prompt">
-							<div class="wrapper">
-								<p class="sr-only">This is a writing prompt, let it inspire you or write whatever you would like!</p>
-								<div class="promptIconContainer">
-									<i class="fa-solid fa-quote-left">
-										<span class="sr-only">Opening quotation mark</span>
-									</i>
-									<div class="promptContainer">
-										<!-- this is where the prompt will populate -->
-										<!-- place holder prompt for styling -->
-										<!-- <h2>If you can dance and be free and be embarrassed, you can rule the world.</h2> -->
-									</div><!-- end of .promptContainer -->
-									<i class="fa-solid fa-quote-right right">
-										<span class="sr-only">Closing quotation mark</span>
-									</i>
-								</div><!-- end of .promptIconContainer -->
-							</div><!-- end of .wrapper -->
-						</section>
-		
-						<!-- CALENDAR IMG -->
-						<div class="wrapper">
-							<figure class="calendar">
-								<img src="./assets/calendar.png" alt="12 month calendar view of 2023">
-							</figure>
-						</div>
-		
-						<!-- TO DO SECTION -->
-						<section class="toDo">
-							<div class="wrapper">
-							<!-- come back to form and determin if we need name action method etc!!!!!!!!!!!!!!!!!!!! -->
-								<form class="toDoForm">
-									<div class="submitContainer">
-										<button class="toDoSubmit">Submit</button>
-										<label for="toDoItem" class="sr-only">Add a to do item!</label>
-										<input type="text" id="toDoItem" placeholder="To Do">
-									</div><!-- end of .submitContainer -->
-								</form>
-								<ul class="toDoUl">
-									<!-- li gets added dynamically here -->
-									<!-- place holder li until strech goal is complete -->
-									<li>Meditate</li>
-									<li>Hydrate</li>
-									<li>Skin Care</li>
-									<li>Organize</li>
-								</ul>
-							</div><!-- end of .wrapper -->
-						</section>
-					</aside>
-				</div><!-- end of nav .flexContainer -->
-			</nav>
-		</div><!-- end of .flexContainer -->
+		<h1>Comfort Journal</h1>
+		<nav>
+			<button type="submit" class="navIcons">
+				<i class="fa-sharp fa-solid fa-angle-left">
+					<span class="sr-only">Close information menu</span>
+				</i>
+				<i class="fa-sharp fa-solid fa-angle-right">
+					<span class="sr-only">Open information menu</span>
+				</i>
+			</button>
+			<!-- NAV ASIDE -->
+			<aside class="navAside">
+				<!-- Nav IMG -->
+				<figure class="headerImg">
+					<img src="./assets/tree.jpg" alt="A tree branch against snow with a shadow">
+				</figure>
+
+				<!-- PROMPT SECTION -->
+				<section class="prompt">
+					<div class="wrapper">
+						<p class="sr-only">This is a writing prompt, let it inspire you or write whatever you would like!</p>
+						<div class="promptIconContainer">
+							<i class="fa-solid fa-quote-left">
+								<span class="sr-only">Opening quotation mark</span>
+							</i>
+							<div class="promptContainer">
+
+							</div>
+							<i class="fa-solid fa-quote-right right">
+								<span class="sr-only">Closing quotation mark</span>
+							</i>
+						</div><!-- end of .promptIconContainer -->
+					</div><!-- end of .wrapper -->
+				</section>
+
+				<!-- CALENDAR IMG -->
+				<div class="wrapper">
+					<figure class="calendar">
+						<img src="./assets/calendar.png" alt="12 month calendar view of 2023">
+					</figure>
+				</div>
+
+				<!-- TO DO SECTION -->
+				<section class="toDo">
+					<div class="wrapper">
+						<form class="toDoForm">
+							<div class="submitContainer">
+								<button class="toDoSubmit">Submit</button>
+								<label for="toDoItem" class="sr-only">Add a to do item!</label>
+								<input type="text" id="toDoItem" placeholder="To Do">
+							</div><!-- end of .submitContainer -->
+						</form>
+						<ul class="toDoUl">
+							<!-- li gets added dynamically here -->
+							<!-- place holder li until strech goal is complete -->
+							<li>Meditate</li>
+							<li>Hydrate</li>
+							<li>Skin Care</li>
+							<li>Organize</li>
+						</ul>
+					</div><!-- end of .wrapper -->
+				</section>
+			</aside>
+		</nav>
 	</header>
 		
 	<!-- MAIN SECTIONS -->
 	<main>
-		<div class="wrapper">
-			<h1>Comfort Journal</h1>
-			<h2>Write something below if you're feeling brave</h2>
-		</div>
-		
 		<!-- User's Posted Journal Entries Section -->
 		<section class="userJournalEntry">
 			<div class="wrapper">
 				<ul class="uploadedEntries">
-					<!-- place holder li for stylng -->
-					<li class="userInputEntry">
-						<h3>March 1, 2023</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, unde harum enim mollitia alias rerum eligendi facere nostrum, perspiciatis accusamus sed minus maiores? Assumenda architecto magni saepe dolore explicabo soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta tenetur reprehenderit, molestiae nulla, quidem error ex voluptates corporis, eveniet itaque molestias temporibus? Pariatur nam dolore ipsam cupiditate odio voluptatum expedita tempore porro, commodi facere ab esse, unde deserunt excepturi adipisci enim sint optio mollitia. Quis perspiciatis est earum officia dicta ipsa eveniet dolore itaque, asperiores expedita ad dolores deleniti totam autem ratione esse, sed architecto cum aperiam odio nostrum iure! Enim temporibus a rerum iste delectus doloremque, hic impedit?</p>
-					</li>
-					<li class="userInputEntry">
-						<h3>March 1, 2023</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, unde harum enim mollitia alias rerum eligendi facere nostrum, perspiciatis accusamus sed minus maiores? Assumenda architecto magni saepe dolore explicabo soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta tenetur reprehenderit, molestiae nulla, quidem error ex voluptates corporis, eveniet itaque molestias temporibus? Pariatur nam dolore ipsam cupiditate odio voluptatum expedita tempore porro, commodi facere ab esse, unde deserunt excepturi adipisci enim sint optio mollitia. Quis perspiciatis est earum officia dicta ipsa eveniet dolore itaque, asperiores expedita ad dolores deleniti totam autem ratione esse, sed architecto cum aperiam odio nostrum iure! Enim temporibus a rerum iste delectus doloremque, hic impedit?</p>
-					</li>
-					<li class="userInputEntry">
-						<h3>March 1, 2023</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, unde harum enim mollitia alias rerum eligendi facere nostrum, perspiciatis accusamus sed minus maiores? Assumenda architecto magni saepe dolore explicabo soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta tenetur reprehenderit, molestiae nulla, quidem error ex voluptates corporis, eveniet itaque molestias temporibus? Pariatur nam dolore ipsam cupiditate odio voluptatum expedita tempore porro, commodi facere ab esse, unde deserunt excepturi adipisci enim sint optio mollitia. Quis perspiciatis est earum officia dicta ipsa eveniet dolore itaque, asperiores expedita ad dolores deleniti totam autem ratione esse, sed architecto cum aperiam odio nostrum iure! Enim temporibus a rerum iste delectus doloremque, hic impedit?</p>
-					</li>
-					<li class="userInputEntry">
-						<h3>March 1, 2023</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, unde harum enim mollitia alias rerum eligendi facere nostrum, perspiciatis accusamus sed minus maiores? Assumenda architecto magni saepe dolore explicabo soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta tenetur reprehenderit, molestiae nulla, quidem error ex voluptates corporis, eveniet itaque molestias temporibus? Pariatur nam dolore ipsam cupiditate odio voluptatum expedita tempore porro, commodi facere ab esse, unde deserunt excepturi adipisci enim sint optio mollitia. Quis perspiciatis est earum officia dicta ipsa eveniet dolore itaque, asperiores expedita ad dolores deleniti totam autem ratione esse, sed architecto cum aperiam odio nostrum iure! Enim temporibus a rerum iste delectus doloremque, hic impedit?</p>
-					</li>
-					<!-- User's uploaded journal entries will go here! -->
 				</ul>
 			</div><!-- end of .wrapper div -->
 		</section><!-- end of .userJournalEntry section -->
@@ -130,7 +98,6 @@
 		<!-- Journal Entry Form -->
 		<section class="journalInput">
 			<div class="wrapper">
-				<!-- come back to form and determin if we need name class method etc!!!!!!!!!!!!!!!!!!!! -->
 				<form class="journalForm">
 					<textarea name="comment" id="comment" placeholder="Penny for your thoughts?"></textarea>
 					<button type="submit" id="journalButton">Submit</button>
@@ -138,7 +105,7 @@
 			</div><!-- end of .wrapper div -->
 		</section><!-- end of journalInput -->
 	</main>
-</div> <!-- end of flexcontainer for pre ham styling -->
+</div> <!-- end of flexcontainer-->
 
 <!-- FOOTER SECTION -->
 <footer>
