@@ -5,8 +5,10 @@ main {
     flex-basis: 55%;
 }
 
-// Need to figure out how to create vertical space between the form and journal entries
-    // Creating vertical space in .journalContainer?
+main.full{
+    flex-basis: 100%;
+}
+
 
 .uploadedEntries {
     height: 100rem;
@@ -29,6 +31,7 @@ main {
         height: 250px;
         width: 100%;
         resize: none;
+        padding: 15px
     }
 
     button {

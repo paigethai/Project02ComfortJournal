@@ -16,15 +16,8 @@ const promptRef = ref(database, '/prompts');
 const userEntryRef = ref(database, '/userEntry');
 
 
-// Use document.querySelector() to get our JS objects:
-    // 1. One that points to the form that would hold the input text area
-    const formElement = document.querySelector('.journalForm');
-
-    // 4. One that points to the button for the user to submit their entry MIGHT NOT NEED THIS~!!!!!!!!!!!!!!!!
-    const journalButton = document.querySelector('#journalButton');
-
-    // 5. One that points to the ul will hold the the each li (journal entry)
-    const journalUl = document.querySelector('.uploadedEntries');
+const formElement = document.querySelector('.journalForm');
+const journalUl = document.querySelector('.uploadedEntries');
 
 // Add an eventListener() to the form to listen for 'submit'. On submit it should: 
 formElement.addEventListener('submit', function(event){
@@ -91,6 +84,9 @@ onValue(userEntryRef, function(journalObject){
             journalUl.appendChild(newListItem);
         }
     }
+    else if (journalObject === "") {
+        alert('You have not entered anything, please add in some thoughts or feelings!')
+    }
 })
 
 
@@ -117,6 +113,7 @@ onValue(promptRef, function(data){
         const randomPrompt = Math.floor(Math.random() * promptArray.length)
         return promptArray[randomPrompt];
     }
+
     const randomizedPrompt = randomPrompt(promptData);
 
     // Refer to the variable from Step 1 and use the innerHTML property to add --> <p>${randomPrompt}</p>
@@ -124,5 +121,11 @@ onValue(promptRef, function(data){
         const headerTwo = randomizedPrompt;
         promptContainer.innerHTML = `<h2>${headerTwo}</h2>`;
         console.log(headerTwo);
+    }
+    if (data = 'null'){
+        promptContainer.innerHTML = `<h2>If you can dance and be free and be embarrassed, you can rule the world.</h2>`;
+    }
+    if (data = 'null'){
+        promptContainer.innerHTML = `<h2>If you can dance and be free and be embarrassed, you can rule the world.</h2>`;
     }
 })

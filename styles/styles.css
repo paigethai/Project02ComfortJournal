@@ -425,6 +425,7 @@ main {
   height: 250px;
   width: 100%;
   resize: none;
+  padding: 15px;
 }
 .journalForm button {
   color: #5d6269;
