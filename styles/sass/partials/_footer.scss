@@ -1,1 +1,8 @@
 @use './variables' as *;
+
+footer {
+    background-color: $detailColor;
+    padding: 5px;
+    text-align: center;
+
+}
