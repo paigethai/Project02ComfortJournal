@@ -1,6 +1,7 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+// HAMBURGER STYLING
 main {
     flex-basis: 55%;
 }
@@ -8,9 +9,8 @@ main {
 main.full{
     flex-basis: 100%;
 }
-// Need to figure out how to create vertical space between the form and journal entries
-    // Creating vertical space in .journalContainer?
 
+// JOURNAL ENTRY SECTION STYLING
 .uploadedEntries {
     height: 65rem;
     overflow-y: scroll;
@@ -25,6 +25,8 @@ main.full{
     margin: 2rem 0;
 }
 
+
+// JOURNAL FORM STYLING
 .journalForm textarea {
     border: 1.5px solid $borderColor;
 }
