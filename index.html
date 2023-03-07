@@ -14,138 +14,111 @@
 
 	<!-- LINK TO FONTAWESOME KIT -->
 	<script src="https://kit.fontawesome.com/cb1b95cbfc.js" crossorigin="anonymous"></script>
+
+	<!-- LINK FAVICON -->
+	<link rel="icon" type="image/x-icon" href="/assets/android-chrome-192x192.png">
+
 	<title>Comfort Journal</title>
 </head>
 <body>
-	<!-- We're aware that this is not best practice....  -->
-	<div class="flexContainer">
-		<header>
-			<div class="flexContainer">
-				<nav>
-					<div class="flexContainer">
-						<button type="submit" class="navIcons">
-							<i class="fa-solid fa-x">
-								<span class="sr-only">Close navigation menu</span>
+<div class="flexContainer">
+	<header>
+		<h1>Comfort Journal</h1>
+		<nav>
+			<button type="submit" class="navIcons">
+				<i class="fa-sharp fa-solid fa-angle-left">
+					<span class="sr-only">Close information menu</span>
+				</i>
+				<i class="fa-sharp fa-solid fa-angle-right">
+					<span class="sr-only">Open information menu</span>
+				</i>
+			</button>
+			<!-- NAV ASIDE -->
+			<aside class="navAside">
+				<!-- Nav IMG -->
+				<figure class="headerImg">
+					<img src="./assets/tree.jpg" alt="A tree branch against snow with a shadow.">
+				</figure>
+
+				<!-- PROMPT SECTION -->
+				<section class="prompt">
+					<div class="wrapper">
+						<p class="sr-only">This is a writing prompt, let it inspire you or write whatever you would like!</p>
+						<div class="promptIconContainer">
+							<i class="fa-solid fa-quote-left">
+								<span class="sr-only">Opening quotation mark</span>
 							</i>
-							<i class="fa-solid fa-bars">
-								<span class="sr-only">Open navigation menu</span>
-							</i>
-						</button>
-		
-						<!-- NAV ASIDE -->
-						<aside>
-							<!-- Nav IMG -->
-							<figure class="headerImg">
-								<img src="./assets/tree.jpg" alt="A tree branch against snow with a shadow">
-							</figure>
-		
-							<!-- PROMPT SECTION -->
-							<section class="prompt">
-								<div class="wrapper">
-									<p class="sr-only">This is a writing prompt, let it inspire you or write whatever you would
-										like!</p>
-		
-									<div class="promptIconContainer">
-										<i class="fa-solid fa-quote-left">
-											<span class="sr-only">Opening quotation mark</span>
-										</i>
-		
-										<div class="promptContainer">
-											<!-- this is where the prompt will populate -->
-											<!-- place holder prompt for styling -->
-											<h2>If you can dance and be free and be embarrassed, you can rule the world.</h2>
-										</div><!-- end of .promptContainer -->
-		
-										<i class="fa-solid fa-quote-right right">
-											<span class="sr-only">Closing quotation mark</span>
-										</i>
-									</div><!-- end of .promptIconContainer -->
-								</div><!-- end of .wrapper -->
-							</section>
-		
-							<!-- CALENDAR IMG -->
-							<div class="wrapper">
-								<figure class="calendar">
-									<img src="./assets/calendar.png" alt="12 month calendar view of 2023">
-								</figure>
+							<div class="promptContainer">
+
 							</div>
-		
-							<!-- TO DO SECTION -->
-							<section class="toDo">
-								<div class="wrapper">
-									<!-- come back to form and determin if we need name action method etc!!!!!!!!!!!!!!!!!!!! -->
-									<form class="toDoForm">
-										<div class="submitContainer">
-											<button class="toDoSubmit">Submit</button>
-											<label for="toDoItem" class="sr-only">Add a to do item!</label>
-											<input type="text" id="toDoItem" placeholder="To Do">
-										</div><!-- end of .submitContainer -->
-									</form>
-									<ul class="toDoUl">
-										<!-- li gets added dynamically here -->
-										<!-- place holder li until strech goal is complete -->
-										<li>Meditate</li>
-										<li>Hydrate</li>
-										<li>Skin Care</li>
-										<li>Organize</li>
-									</ul>
-								</div><!-- end of .wrapper -->
-							</section>
-						</aside>
-					</div><!-- end of nav .flexContainer -->
-				</nav>
-		
-				<!-- <div class="wrapper">
-					<h1>Comfort Journal</h1>
-				</div>end of .wrapper -->
-			</div><!-- end of .flexContainer -->
-		</header>
-		
-		<!-- MAIN SECTIONS -->
-		<main>
-			<h1>Comfort Journal</h1>
+							<i class="fa-solid fa-quote-right right">
+								<span class="sr-only">Closing quotation mark</span>
+							</i>
+						</div><!-- end of .promptIconContainer -->
+					</div><!-- end of .wrapper -->
+				</section>
 
-			<div class="flexContainer">
-		
-				<!-- User's Posted Journal Entries Section -->
-				<section class="userJournalEntry">
+				<!-- CALENDAR IMG -->
+				<div class="wrapper">
+					<figure class="calendar">
+						<img src="./assets/calendar.png" alt="12 month calendar view of 2023.">
+					</figure>
+				</div>
+
+				<!-- TO DO SECTION -->
+				<section class="toDo">
 					<div class="wrapper">
-						<ul class="uploadedEntries">
-							<!-- User's uploaded journal entries will go here! -->
-							<!-- User's uploaded journal entries will go here! -->
-							<!-- User's uploaded journal entries will go here! -->
-							<!-- User's uploaded journal entries will go here! -->
-							<!-- User's uploaded journal entries will go here! -->
-						</ul>
-					</div><!-- end of .wrapper div -->
-				</section><!-- end of .userJournalEntry section -->
-		
-				<!-- Journal Entry Form -->
-				<section class="journalInput">
-					<div class="wrapper">
-						<!-- come back to form and determin if we need name class method etc!!!!!!!!!!!!!!!!!!!! -->
-						<form class="journalForm">
-							<textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+						<form class="toDoForm">
+							<div class="submitContainer">
+								<button class="toDoSubmit">Submit</button>
+								<label for="toDoItem" class="sr-only">Add a to do item!</label>
+								<input type="text" id="toDoItem" placeholder="To Do">
+							</div><!-- end of .submitContainer -->
 						</form>
+						<ul class="toDoUl">
+							<!-- li gets added dynamically here -->
+							<!-- place holder li until stretch goal is complete -->
+							<li>Meditate</li>
+							<li>Hydrate</li>
+							<li>Skin Care</li>
+							<li>Organize</li>
+						</ul>
+					</div><!-- end of .wrapper -->
+				</section>
+			</aside>
+		</nav>
+	</header>
 		
-						<button type="submit">Submit</button>
-					</div><!-- end of .wrapper div -->
-				</section><!-- end of journalInput -->
-			</div><!-- end of .flexContainer div -->
-
-			<!-- ********TEST******** -->
-			<section>
-				<p>TEST</p>
-			</section>
-		</main>
+	<!-- MAIN SECTIONS -->
+	<main>
+		<!-- User's Posted Journal Entries Section -->
+		<section class="userJournalEntry">
+			<div class="wrapper">
+				<ul class="uploadedEntries">
+				</ul>
+			</div><!-- end of .wrapper div -->
+		</section><!-- end of .userJournalEntry section -->
 		
-		<!-- FOOTER SECTION -->
-		<footer>
-			<p>© Kenzie Burke & Paige Thai 2023</p>
-		</footer>
-	</div>
+		<!-- Journal Entry Form -->
+		<section class="journalInput">
+			<div class="wrapper">
+				<form class="journalForm">
+					<label for="comment" class="sr-only">Add in some thoughts feelings of share anything thats on your mind.</label>
+					<textarea name="comment" id="comment" required="true" minlength="3" placeholder="Penny for your thoughts?"></textarea>
+					<button type="submit" id="journalButton">Submit</button>
+				</form>
+			</div><!-- end of .wrapper div -->
+		</section><!-- end of journalInput -->
+	</main>
+</div> <!-- end of flexContainer-->
 
-	<!-- LINK TO JS FILE -->
-	<script type="module" src="/script.js"></script>
+<!-- FOOTER SECTION -->
+<footer>
+	<p>© Kenzie Burke & Paige Thai 2023</p>
+</footer>
+
+<!-- LINK TO JS FILE -->
+<script type="module" src="/script.js"></script>
+
 </body>
 </html>

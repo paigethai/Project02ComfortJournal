@@ -1,2 +1,61 @@
 @use './variables' as *;
 @use './mixins' as *;
+
+// HAMBURGER STYLING
+main {
+    flex-basis: 55%;
+}
+
+main.full{
+    flex-basis: 100%;
+}
+
+// JOURNAL ENTRY SECTION STYLING
+.uploadedEntries {
+    height: 79rem;
+    margin-top: 5rem;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    border-top: 0.5px solid $borderColor;
+
+    h3 {
+        margin-top: 2rem;
+    }
+}
+
+.userInputEntry {
+    h3{
+        font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+    margin: 2rem 0;
+}
+
+
+// JOURNAL FORM STYLING
+.journalForm textarea {
+    border: 1.5px solid $borderColor;
+}
+
+.journalForm {
+    textarea {
+        height: 250px;
+        width: 100%;
+        resize: none;
+        padding: 15px
+    }
+
+    button {
+        @include button;
+        width: 100%;
+        margin-top: -3px;
+        padding: 10px;
+    }
+
+    button:hover, 
+    button:focus {
+        color: $backgroundColor1;
+        background-color: $borderColor;
+    }
+}
+
+    
