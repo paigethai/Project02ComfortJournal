@@ -12,10 +12,15 @@ main.full{
     // Creating vertical space in .journalContainer?
 
 .uploadedEntries {
-    height: 65rem;
+    height: 79rem;
+    margin-top: 5rem;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     border-top: 0.5px solid $borderColor;
+
+    h3 {
+        margin-top: 2rem;
+    }
 }
 
 .userInputEntry {
