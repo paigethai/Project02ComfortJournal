@@ -287,7 +287,6 @@ p, a, li {
 
 p {
   line-height: 1.6rem;
-  letter-spacing: 0.05rem;
   font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
@@ -475,6 +474,7 @@ main.full {
   height: 250px;
   width: 100%;
   resize: none;
+  padding: 15px;
 }
 .journalForm button {
   color: #5d6269;

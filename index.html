@@ -14,6 +14,10 @@
 
 	<!-- LINK TO FONTAWESOME KIT -->
 	<script src="https://kit.fontawesome.com/cb1b95cbfc.js" crossorigin="anonymous"></script>
+
+	<!-- LINK FAVICON -->
+	<link rel="icon" type="image/x-icon" href="/assets/android-chrome-192x192.png">
+
 	<title>Comfort Journal</title>
 </head>
 <body>
@@ -33,7 +37,7 @@
 			<aside class="navAside">
 				<!-- Nav IMG -->
 				<figure class="headerImg">
-					<img src="./assets/tree.jpg" alt="A tree branch against snow with a shadow">
+					<img src="./assets/tree.jpg" alt="A tree branch against snow with a shadow.">
 				</figure>
 
 				<!-- PROMPT SECTION -->
@@ -57,7 +61,7 @@
 				<!-- CALENDAR IMG -->
 				<div class="wrapper">
 					<figure class="calendar">
-						<img src="./assets/calendar.png" alt="12 month calendar view of 2023">
+						<img src="./assets/calendar.png" alt="12 month calendar view of 2023.">
 					</figure>
 				</div>
 
@@ -73,7 +77,7 @@
 						</form>
 						<ul class="toDoUl">
 							<!-- li gets added dynamically here -->
-							<!-- place holder li until strech goal is complete -->
+							<!-- place holder li until stretch goal is complete -->
 							<li>Meditate</li>
 							<li>Hydrate</li>
 							<li>Skin Care</li>
@@ -99,13 +103,14 @@
 		<section class="journalInput">
 			<div class="wrapper">
 				<form class="journalForm">
-					<textarea name="comment" id="comment"></textarea>
+					<label for="comment" class="sr-only">Add in some thoughts feelings of share anything thats on your mind.</label>
+					<textarea name="comment" id="comment" required="true" minlength="3" placeholder="Penny for your thoughts?"></textarea>
 					<button type="submit" id="journalButton">Submit</button>
 				</form>
 			</div><!-- end of .wrapper div -->
 		</section><!-- end of journalInput -->
 	</main>
-</div> <!-- end of flexcontainer-->
+</div> <!-- end of flexContainer-->
 
 <!-- FOOTER SECTION -->
 <footer>
