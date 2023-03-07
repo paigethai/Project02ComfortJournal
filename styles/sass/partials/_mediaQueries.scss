@@ -1,20 +1,43 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+@media (max-width: 1250px) {
+    .uploadedEntries {
+        height: 73em;
+    }
+}
+
 @media (max-width: 950px) {
     .uploadedEntries {
-        height: 60rem;
+        height: 59rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .uploadedEntries {
+        height: 52.2rem;
     }
 }
 
 
-@media (max-width: 550px) {
+@media (max-width: 550px) {  
+    header h1 {
+        padding: 20px 0 0 43px;
+    }
     .navIcons {
+        position: none;
         z-index: 20;
+        
+        i {
+            color: #626f39;
+        }
 
         .fa-angle-left {
             position: absolute;
+            top: 240px;
             left: 200px;
+            font-size: 4rem;
+            opacity: 80%;
         }
     }
     
@@ -24,6 +47,28 @@
         z-index: 10;
         position: fixed;
         overflow-y: scroll;
-        background-color: white;
+        background-color: $backgroundColor1;
+    }
+}
+
+@media (max-width: 320px) {
+    header h1 {
+        padding: 0;
+        margin: 14px 50px;
+    }
+    
+    .userJournalEntry {
+        margin-top: 7rem;
+    }
+    
+    .navIcons {
+        .fa-angle-left {
+            top: 100px;
+            left: 100px;
+        }
+
+        .fa-angle-right {
+            font-size: 2.5rem;
+        }
     }
 }
