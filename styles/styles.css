@@ -503,6 +503,11 @@ footer {
   text-align: center;
 }
 
+@media (max-width: 1440px) {
+  .uploadedEntries {
+    height: 82rem;
+  }
+}
 @media (max-width: 1250px) {
   .uploadedEntries {
     height: 73em;
