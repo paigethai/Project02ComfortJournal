@@ -33,11 +33,6 @@
     .navIcons {
         position: none;
         z-index: 20;
-        
-        i {
-            color: #626f39;
-        }
-
         .fa-angle-left {
             position: absolute;
             top: 240px;
@@ -46,14 +41,28 @@
             opacity: 80%;
         }
     }
-    
     aside {
         height: 900px;
         width: 100%;
         z-index: 10;
-        position: fixed;
-        overflow-y: scroll;
-        background-color: $backgroundColor1;
+        position: absolute;
+        background-color: white;
+    }
+
+    .toDo{
+        background-color: white;
+    }
+
+    main {
+        visibility: hidden;
+    }
+    
+    main.full{
+        visibility: visible;
+    }
+
+    .uploadedEntries {
+        margin-top: 6.5rem;
     }
 }
 

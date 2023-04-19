@@ -287,6 +287,7 @@ p, a, li {
 
 p {
   line-height: 1.6rem;
+  letter-spacing: 0.05rem;
   font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
@@ -531,9 +532,6 @@ footer {
     position: none;
     z-index: 20;
   }
-  .navIcons i {
-    color: #626f39;
-  }
   .navIcons .fa-angle-left {
     position: absolute;
     top: 240px;
@@ -545,9 +543,20 @@ footer {
     height: 900px;
     width: 100%;
     z-index: 10;
-    position: fixed;
-    overflow-y: scroll;
-    background-color: #FFF;
+    position: absolute;
+    background-color: white;
+  }
+  .toDo {
+    background-color: white;
+  }
+  main {
+    visibility: hidden;
+  }
+  main.full {
+    visibility: visible;
+  }
+  .uploadedEntries {
+    margin-top: 6.5rem;
   }
 }
 @media (max-width: 320px) {
