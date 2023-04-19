@@ -107,7 +107,7 @@ const main = document.querySelector('main');
 const header = document.querySelector('header');
 const h1Element = document.querySelector('h1');
 
-const menuToggle = function(){
+const menuToggle = () => {
     if (navAside.classList.contains("shown"))
     {
         navAside.classList.remove('shown');
@@ -131,3 +131,15 @@ const menuToggle = function(){
 
 navIcons.addEventListener("click", menuToggle);
 
+
+window.addEventListener("load", () => {
+    if (window.innerWidth < 550) {
+      navAside.classList.add("shown");
+      main.classList.add("full");
+      header.classList.add("hide");
+      navIcons.classList.add("move");
+      h1Element.classList.add("move");
+      closeNav.style.display = "none";
+      hamIcon.style.display = "block";
+    }
+  });
