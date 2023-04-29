@@ -431,8 +431,9 @@ aside {
   width: 80%;
 }
 .toDo .toDoUl {
-  list-style: circle;
   padding: 40px;
+  height: 500px;
+  overflow-y: scroll;
 }
 .toDo .toDoUl li {
   padding: 10px 0;
@@ -520,6 +521,9 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  .toDo .toDoUl {
+    height: 370px;
+  }
   .uploadedEntries {
     height: 52.2rem;
   }

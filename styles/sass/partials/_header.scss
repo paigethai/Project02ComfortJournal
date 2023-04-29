@@ -125,8 +125,9 @@ aside{
         }
     }
     .toDoUl{
-        list-style: circle;
         padding: 40px;
+        height: 500px;
+        overflow-y: scroll;
         li{
             padding: 10px 0;
         }

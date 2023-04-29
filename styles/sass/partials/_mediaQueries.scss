@@ -20,6 +20,11 @@
 }
 
 @media (max-width: 768px) {
+    .toDo{
+        .toDoUl{
+            height: 370px;
+        }
+    }
     .uploadedEntries {
         height: 52.2rem;
     }
