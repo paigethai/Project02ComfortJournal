@@ -1,6 +1,6 @@
 import firebaseInfo from "./firebase.js";
 
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
 
 const database = getDatabase(firebaseInfo);
 const dbRef = ref(database);
@@ -143,3 +143,64 @@ window.addEventListener("load", () => {
       hamIcon.style.display = "block";
     }
   });
+
+
+// **************************************************
+
+// TO DO 
+
+// **************************************************
+
+
+const toDoRef = ref(database, '/toDo');
+
+
+const toDoForm = document.querySelector('.toDoForm');
+const toDoUl = document.querySelector('.toDoUl');
+
+
+toDoForm.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    const inputElement = document.getElementById('toDoItem');
+    const task = inputElement.value;
+
+
+    if(task){
+        push(toDoRef, task);
+        inputElement.value = '';
+    } else  {
+        alert('You have not entered anything, please add in a task!')
+    }
+});
+
+
+
+onValue(toDoRef, function(toDoObj){
+    const toDoDBObj = toDoObj.val()
+
+    if(toDoObj.exists()){
+        const listOfToDo = toDoObj.val();
+        toDoUl.innerHTML = "";
+
+        for(let Key in listOfToDo){
+            const listItemElement = document.createElement('li');
+            listItemElement.innerHTML = `<i class="far fa-square ${Key}"></i> `;
+            listItemElement.appendChild(document.createTextNode(listOfToDo[Key]));
+    
+            toDoUl.appendChild(listItemElement);
+        }
+    }
+    else{
+        alert('you have not entered and To Dos to Do!')}
+})
+
+
+
+    // Remove those completed tasks!!
+    toDoUl.addEventListener('click', function(event){
+        if (event.target.tagName === "I"){
+            const toDoID = event.target.classList[2]
+            const indivToDo = ref(database,`/toDo/${toDoID}`)
+            remove(indivToDo)
+        }})
